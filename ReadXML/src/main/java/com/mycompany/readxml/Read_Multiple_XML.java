@@ -40,10 +40,11 @@ public class ReadXML {
     }  
     
      private void lerarq() throws ParseException {  
-        //Aqui você informa o nome do arquivo XML.  
+          
         
         File arquivos[];
         File diretorio = new File("seu_diretorio");
+	//lista de arquivos do seu_diretório     
         arquivos = diretorio.listFiles();
 
         for(int i1 = 0; i1 < arquivos.length; i1++){
@@ -53,6 +54,7 @@ public class ReadXML {
             //Este documento agora possui toda a estrutura do arquivo.  
             Document d;  
             try {  
+		//testar cada arquivo no diretório citado
                 d = sb.build(arquivos[i1]);  
 
                 //Recuperamos o elemento root  
@@ -86,19 +88,19 @@ public class ReadXML {
             
             System.out.println("-----------------------------------------------------------");
         }
-        //File f = new File("C:\\Users\\lucas.costa\\Videos\\Notas\\t.xml");    
+           
 
        
   
   
     }  
   
-    private String getDateTime() { 
+    /*private String getDateTime() { 
 	DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
         System.out.println(dateFormat);
 	Date date = new Date(); 
 	return dateFormat.format(date); 
-    }
+    }*/
     
     private void trataElement(Element element) throws ParseException {  
   
